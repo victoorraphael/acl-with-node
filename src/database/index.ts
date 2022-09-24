@@ -1,32 +1,38 @@
-import { Connection, createConnection } from "typeorm";
+import { createConnection } from "typeorm";
 
-class Database {
-  public connection: Connection;
+createConnection()
+// import { DataSource } from "typeorm";
+// import "reflect-metadata"
 
-  constructor() {
-    this.connect()
-  }
+// class Database {
+//   public connection: DataSource;
 
-  private connect(): void {
-    createConnection({
-      type: "postgres",
-      host: "localhost",
-      port: 5432,
-      username: "root",
-      password: "topsecret",
-      database: "aclnode",
-      entities: [
-        __dirname + "/entity/*.ts",
-        __dirname + "/entity/*.js"
-      ],
-      synchronize: true,
-      logging: false
-    })
-    .then(_con => {
-      this.connection = _con
-      console.log("DB connected!")
-    }).catch(console.error)
-  }
-}
+//   constructor() {
+//     this.connect()
+//   }
 
-export const db = new Database();
+//   private connect(): void {
+//     new DataSource({
+//       type: "postgres",
+//       host: "localhost",
+//       port: 5432,
+//       username: "root",
+//       password: "topsecret",
+//       database: "aclnode",
+//       synchronize: true,
+//       logging: false,
+//       entities: [
+//        __dirname +  "src/entities/**/*.ts",
+//        __dirname +  "src/entities/**/*.js",
+//       ],
+//   })
+//   .initialize()
+//   .then(_con => {
+//     this.connection = _con
+//     console.log("DB connected")
+//   })
+//   .catch(console.error)
+//   }
+// }
+
+// export const db = new Database();

@@ -4,10 +4,10 @@ import { Permission } from "./permission";
 
 @Entity({ name: "student"})
 export class Student extends BaseEntity{
-  @Column()
+  @Column({ name: "firstname" })
   firstName: string;
 
-  @Column()
+  @Column({ name: "lastname" })
   lastName: string;
 
   @Column({ name: "created_at" })
