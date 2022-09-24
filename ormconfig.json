@@ -1,0 +1,9 @@
+{
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "root",
+  "password": "topsecret",
+  "database": "aclnode",
+  "entities": ["./src/entities/*.ts"]
+}

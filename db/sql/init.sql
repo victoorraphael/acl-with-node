@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS permission (
 
 INSERT INTO permission (permission_type) VALUES ('read');
 INSERT INTO permission (permission_type) VALUES ('write');
+INSERT INTO permission (permission_type) VALUES ('edit');
 
 CREATE TABLE IF NOT EXISTS permission_x_students (
   student_id uuid,
