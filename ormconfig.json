@@ -5,5 +5,5 @@
   "username": "root",
   "password": "topsecret",
   "database": "aclnode",
-  "entities": ["./src/entities/*.ts"]
+  "entities": ["./src/entities/*{.ts,.js}"]
 }
